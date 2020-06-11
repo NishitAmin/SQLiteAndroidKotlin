@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCF8D4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="579dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="4dp"
+        android:text="Product DB Demo"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textColorHint="#3F51B5"
+        android:textSize="27sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="500dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/etQuantity"
+        android:layout_width="500dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="Quantity"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <Button
+        android:id="@+id/btnAddToDB"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Add Data"
+        app:layout_constraintStart_toEndOf="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnShowDataFromDb"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Show Data"
+        app:layout_constraintStart_toEndOf="@+id/etQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddToDB" />
+
+    <TextView
+        android:id="@+id/tvDataBaseContent1"
+        android:layout_width="325dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="100dp"
+        android:text="Product:"
+        app:layout_constraintEnd_toEndOf="@+id/etSearch"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch" />
+
+    <TextView
+        android:id="@+id/tvDataBaseContent2"
+        android:layout_width="325dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:text="Quantity:"
+        app:layout_constraintStart_toEndOf="@+id/tvDataBaseContent1"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="425dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="75dp"
+        android:ems="10"
+        android:hint="Find/Delete Product"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/etQuantity" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+        android:text="@android:string/search_go"
+        app:layout_constraintStart_toEndOf="@+id/etSearch"
+        app:layout_constraintTop_toBottomOf="@+id/etQuantity" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Delete"
+        app:layout_constraintStart_toEndOf="@+id/btnSearch"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowDataFromDb" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
